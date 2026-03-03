@@ -24,9 +24,14 @@ int main() {
 	int age;
 	int mon_sal;
 
+
+	printf("Welcome to the employee logging system, please enter the information about 5 employees:");
+
 	printf("Name: ");
 	fgets(name, sizeof(name), stdin);
-	name[strcspn(name, "\n")] = '\0';
+	name[strcspn(name, "\n")] = '\0'; 
+	//fgets reads input from the user including the newline that is typed when the user presses Enter.
+	//strcspn replaces the newline with the string terminator \0, to prevent formatting errors 
 
 	printf("Surname: ");
 	fgets(surname, sizeof(surname), stdin);
@@ -38,7 +43,7 @@ int main() {
 	printf("Monthly salary: ");
 	scanf("%d", &mon_sal);
 
-	printf("%-10.10s | %-10.10s | %-10d | %-10d |", name, surname, age, mon_sal);
+	printf("| %-10.10s | %-10.10s | %-10d | %-10d |", name, surname, age, mon_sal);
 
 	return 0;
 }
