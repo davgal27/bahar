@@ -54,7 +54,7 @@ int main() {
         printf("2. Show current total\n");
         printf("3. Checkout\n");
         printf("4. Cancel session\n");
-        printf("q. Quit\n");\
+        printf("q. Quit\n");
 
         scanf("%s", choice); // read the choice. If the choice is a char, see if it is quitting. 
 
